@@ -1,16 +1,166 @@
 * {
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    background-color: rgb(189, 189, 189);
-    margin-top: 0px;
-    margin-bottom: 0px;
+    background-color: #1c1c1c; /* Nero con un tocco di grigio per un look grunge */
+    font-size: 16px;
 }
 
-@media (max-width:768px) {
+header {
+    margin: 0 auto;
+    width: 960px;
+    background-color: #333; /* Grigio scuro per il background */
+    box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.8);
+}
 
+header h1 {
+    text-align: center;
+    padding: 20px;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #ffcc00; /* Giallo brillante, richiama la vivacità del rock anni '70 */
+    letter-spacing: 5px;
+    font-family: 'Rock Salt', cursive; /* Font che richiama lo stile vintage */
+    text-shadow: 2px 2px 4px #000000; /* Effetto ombra per un look più drammatico */
+}
+
+header nav {
+    text-align: center;
+    background-color: #444; /* Grigio scuro per il menu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline-block;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffcc00; /* Giallo brillante per i link */
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #e74c3c; /* Rosso scuro per hover */
+    color: #1c1c1c;
+}
+
+header figure img {
+    width: 100%;
+    height: auto;
+}
+
+main {
+    margin: 0 auto;
+    width: 960px;
+    background-color: #222; /* Grigio scuro per il contenuto */
+    box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.8);
+    padding-bottom: 20px;
+}
+
+main h2 {
+    text-align: center;
+    color: #ffcc00; /* Giallo per i titoli principali */
+    font-size: 2.5em;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Rock Salt', cursive; /* Font con stile vintage */
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.prodotti {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+article {
+    width: 280px;
+    height: 350px;
+    background-color: #444; /* Grigio scuro per gli articoli */
+    border: 2px solid #ffcc00; /* Bordo giallo */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    line-height: 40px;
+    margin: 20px 10px 20px 10px;
+    cursor: pointer;
+}
+
+article:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 25px rgba(231, 76, 60, 0.8); /* Ombra rossa durante hover */
+}
+
+article figure img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+article h3 {
+    font-size: 1.2em;
+    color: #ffcc00; /* Giallo per i titoli degli articoli */
+    text-transform: uppercase;
+    padding: 10px;
+    font-family: 'Rock Salt', cursive;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.text {
+    margin: 20px 10px 20px 10px;
+    background-color: #444;
+    border: 2px solid #ffcc00; /* Bordo giallo per richiamare il tema vintage */
+    padding: 15px;
+    line-height: 1.6;
+    color: #fff;
+}
+
+footer {
+    width: 960px;
+    height: 100px;
+    margin: 0 auto;
+    background-color: #333;
+    box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.8);
+    padding: 0;
+    margin-top: -16px;
+}
+
+footer div p {
+    padding: 20px 0px 0px 20px;
+    color: #ffcc00;
+    font-size: 0.9em;
+}
+
+footer div p a {
+    text-decoration: none;
+    color: #ffcc00; /* Giallo per i link nel footer */
+    font-weight: bold;
+}
+
+footer div p a:hover {
+    color: #e74c3c; /* Rosso durante hover sui link */
+}
+
+@media (max-width: 768px) {
     header {
         width: 100%;
         display: inline;
@@ -21,14 +171,17 @@ body {
         height: 250px;
     }
 
-    h1,
-    h2 {
+    h1, h2 {
         text-align: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
 
     main {
         width: 100%;
-        display: inline;
     }
 
     main .prodotti {
@@ -40,85 +193,9 @@ body {
         width: 100%;
     }
 
-    main .prodotti article figure img {
-        width: 100%;
-        height: 275px;
-    }
-
-  
-
     footer {
         width: 100%;
         text-align: center;
         display: inline;
     }
-}
-
-header {
-    margin: 0 auto;
-    width: 960px;
-    background-color: rgba(54, 53, 53, 0.438);
-    box-shadow: 10px 0px 20px rgb(42, 42, 42);
-}
-
-main {
-    margin: 0 auto;
-    width: 960px;
-    background-color: rgb(54, 53, 53);
-    box-shadow: 10px 0px 20px rgb(42, 42, 42);
-    padding-bottom: 20px;
-}
-
-figure {
-    margin: 0px;
-    background-color: rgb(54, 53, 53);
-}
-
-.prodotti {
-    width: 960px;
-    display: flex;
-    justify-content: space-around;
-}
-
-main article h3 {
-    text-align: center;
-    line-height: 15px;
-}
-
-article {
-    width: 300px;
-    height: 350px;
-    background-color: #363535;
-    border: 1px solid white;
-    background-color: rgb(0, 0, 0);
-}
-
-h1,
-h2 {
-    padding: 20px;
-    background-color: rgb(54, 53, 53);
-    margin: 0 auto;
-    padding-bottom: 30px;
-}
-
-.text {
-    margin: 20px 10px 0px 10px;
-    background-color: rgb(54, 53, 53);
-    border: 1px solid white;
-    padding: 0px 10px;
-}
-
-footer {
-    width: 960px;
-    height: 100px;
-    margin: 0 auto;
-    background-color: rgb(54, 53, 53);
-    box-shadow: 10px 0px 20px rgb(42, 42, 42);
-    padding: 0px;
-    margin-top: -16px;
-}
-
-
-footer div p {
-    padding: 20px 0px 0px 20px;
 }
